@@ -1,0 +1,45 @@
+/**
+ * ----------------------------------------------------------------------------
+ * #.# Editor CSS
+ *wp-block-hgd-block-editablelist-01
+ * BLOCK: 06-block-editablelist block CSS for the editor.
+ * ----------------------------------------------------------------------------
+ */
+
+.wp-block-hgd-block-editablelist-01 {
+    color: #000000;
+    background: azure;
+    border: 0.2rem solid midnightblue;
+    padding: 2rem;
+}
+.icon-container{
+    background: rgba(0,0,0,0);
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.image-button{
+    background: rgba(0,0,0,0);
+}
+
+img{
+    min-width: 100%;
+}
+
+.blocks-editable{
+    max-width: 80%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.blocks-editable p{
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+button{
+    padding: 0;
+}
