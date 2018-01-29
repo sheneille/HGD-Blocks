@@ -46,4 +46,9 @@ if ( ! defined( 'GB_URL' ) ) {
  */
 require_once( GB_DIR . '/block/01-icon-text/index.php' );
 
+/**
+ * BLOCK: Cscard Block
+ */
+require_once( GB_DIR . '/block/02-cscard/index.php' );
+
 
