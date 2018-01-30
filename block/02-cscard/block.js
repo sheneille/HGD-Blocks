@@ -10,7 +10,6 @@
     var el = wp.element;
     var blocks = wp.blocks;
     var children = blocks.source.children;
-    var attr = blocks.source.attr;
     var registerBlockType = blocks.registerBlockType;
     var mediaUploadButton = blocks.MediaUploadButton;
 
@@ -60,12 +59,13 @@
 
             /* Update csName*/
 
-            function onSelectImage(media) {
-                props.setAttribute({
+            var onSelectImage = (media) => {
+                props.setAttributes({
                     mediaURL: media.url,
                     mediaID: media.id
                 });
-            }
+                console.log(media.id);
+            };
 
             function onChangeCsname(newCsname) {
                 props.setAttributes({csName: newCsname});
@@ -79,39 +79,45 @@
 
             return el.createElement(
                     'div', {className: "cscard-container"},
-                    el.createElement('div', {className: "cscard-img"},
-                            el.createElement(
-                                    mediaUploadButton,
-                                    {
-                                        buttonProps: {
-                                            className: "largeButton"
-                                        },
-                                        onSelect: onSelectImage,
-                                        type: 'image',
-                                        value: props.attributes.mediaID
-                                    },
-                                    props.attributes.mediaID ? el.createElement('img', {src: props.attributes.mediaURL}) : 'Upload Image'
-                                    )),
+                    el.createElement(mediaUploadButton, {
+                        buttonProps: {
+                            className: attributes.mediaID ? 'image-button' : 'button-large'
+                        },
+                        onSelect: onSelectImage,
+                        type: 'image',
+                        value: attributes.mediaID
+                    },
+                            attributes.mediaID ? el.createElement('img', {src: attributes.mediaURL}) : 'Upload Image'
+                            ),
                     el.createElement(blocks.Editable, {
                         tagName: 'h3',
-                        onChange: onChangeCsname,
-                        value: attributes.Csname,
+                        placeholder: __('Case Study Name'),
+                        onChange: onChangeCsname(),
+                        value: attributes.csName,
                         focus: focus,
-                        onFocus: props.setFocus
+                        onFocus: props.setFocus,
                     }),
                     el.createElement(blocks.Editable, {
                         tagName: 'h4',
+                        placeholder: __('Service . Year'),
                         className: "grey",
-                        onChange: onChangeCsmeta,
-                        value: attributes.Csmeta,
+                        onChange: onChangeCsmeta(),
+                        value: attributes.csMeta,
                         focus: focus,
                         onFocus: props.setFocus
                     })
                     );
         },
-        
-        save: function(){
-            
+
+        save: function (props) {
+//            var attributes = props.attributes;
+//            return(
+//            el.createElement('div', {className: "cscard-container"},
+//            el.createElement('img', {src: attributes.mediaURL}
+//                    ),
+//            el.createElement('h3',)
+//                    )
+//            );
         }
     });
 }

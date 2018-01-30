@@ -8,3 +8,33 @@ and open the template in the editor.
     Author     : sheneille
 */
 
+.cscard-container{
+    max-width: 369px;
+}
+
+.cscard-img{
+    display: block;
+    width: 100%;
+    background: red;
+    min-height:260px;
+}
+
+.cscard-img img{
+    display: block;
+    width: 100%;
+}
+
+.button-large{
+    border: 1px solid #999;
+    padding: 10px 20px;
+    background: yellow;
+}
+
+h3{
+    display: block;
+}
+
+h4{
+    display: block;
+}
+
