@@ -8,11 +8,11 @@
 (function () {
     var __ = wp.i18n.__;
     var el = wp.element;
-    var blocks = wp.blocks.Editable;
-    var children = wp.blocks.source.children;
-    var registerBlockType = wp.blocks.registerBlockType;
-    var attr = wp.blocks.source.attr;
-    var mediaUploadButton = wp.blocks.MediaUploadButton;
+    var blocks = wp.blocks;
+    var children = blocks.source.children;
+    var attr = blocks.source.attr;
+    var registerBlockType = blocks.registerBlockType;
+    var mediaUploadButton = blocks.MediaUploadButton;
 
     /**
      * Register cscard Block.
@@ -29,7 +29,7 @@
 
     registerBlockType('hgd/block-cscard-02', {
         title: __('HGD cscard', 'HGD'),
-        icon: 'welcome-add-page',
+        icon: 'plus-alt',
         category: 'common',
 
         attributes: {
