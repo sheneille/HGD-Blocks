@@ -5,7 +5,7 @@
  *        style.css — Frontend styles for the block.
  */
 
-function () {
+(function () {
     var __ = wp.i18n.__;
     var el = wp.element;
     var blocks = wp.blocks.Editable;
@@ -108,7 +108,11 @@ function () {
                         onFocus: props.setFocus
                     })
                     );
+        },
+        
+        save: function(){
+            
         }
     });
 }
-;
+)();
