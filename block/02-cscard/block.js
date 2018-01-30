@@ -92,16 +92,16 @@
                     el.createElement(blocks.Editable, {
                         tagName: 'h3',
                         placeholder: __('Case Study Name'),
-                        onChange: onChangeCsname(),
+                        onChange: onChangeCsname,
                         value: attributes.csName,
                         focus: focus,
-                        onFocus: props.setFocus,
+                        onFocus: props.setFocus
                     }),
                     el.createElement(blocks.Editable, {
                         tagName: 'h4',
                         placeholder: __('Service . Year'),
                         className: "grey",
-                        onChange: onChangeCsmeta(),
+                        onChange: onChangeCsmeta,
                         value: attributes.csMeta,
                         focus: focus,
                         onFocus: props.setFocus
