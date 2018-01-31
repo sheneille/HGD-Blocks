@@ -1,25 +1,27 @@
 ( function () {
-    var i18n = wp.i18n;
+    var __ = wp.i18n.__;
     var element = wp.element;
     var blocks = wp.blocks;
     
-    blocks.registerBlockType( 'hgd/block-editablelist-01', {
-	title: i18n( 'HGD Icon-Text', 'HGD' ),
+    blocks.registerBlockType( 'hgd/block-buttontext-03', {
+	title: __( 'HGD Button-Text', 'HGD' ),
 	icon: 'edit',
 	category: 'common',
 	
 	attributes: {
 	    content: {
-		children: 'p'
+		type: 'array',
+		source: 'children',
+		selector: 'p'
 	    }
 	},
 
 	edit: function ( props ) {
 	    var content = props.attributes.content;
 	    var focus = props.focus;
-	    var onChangeContent = function ( newContent ) {
+	    function onChangeContent( newContent ) {
 		props.setAttributes( { content: newContent } );
-	    };
+	    }
 	    
 	    return element.createElement( blocks.Editable, {
 		tagName: 'p',
