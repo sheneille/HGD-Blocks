@@ -1,0 +1,15 @@
+.cscard-container{
+    max-width: 45%;
+    display: block;
+}
+
+.cscard-container > blocks-editable > h3{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.cscard-container > button{
+    padding: 0;
+    margin: 0;
+}
