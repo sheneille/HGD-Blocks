@@ -24,15 +24,13 @@ function hgd_block_03_block_button_text_editor_assets() {
 	wp_enqueue_script(
 		'hgd-block-03-buton-text',
 		plugins_url( 'block.js', __FILE__ ),
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), 
-		filemtime( plugin_dir_path( __FILE__ ) . 'blocks.js' )
+		array( 'wp-blocks', 'wp-i18n', 'wp-element' )
 	);
 	
 	wp_enqueue_style(
 		'hgd-block-03-buton-text-editor', 
 		plugins_url( 'editor.css', __FILE__ ),
-		array( 'wp-edit-blocks' ),
-		filemtime( plugin_dir_path( __FILE__) . 'editor.css' )
+		array( 'wp-edit-blocks' )
 	);
 }
 
@@ -50,7 +48,6 @@ function hgd_block_03_block_button_text_frontend_assets() {
 	wp_enqueue_style(
 		'hgd-block-03-buton-text-frontend', 
 		plugins_url( 'style.css', __FILE__ ),
-		array( 'wp-blocks' ),
-		filemtime( plugin_dir_path( __FILE__) . 'editor.css' )
+		array( 'wp-blocks' )
 	);
 }
