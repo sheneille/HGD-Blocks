@@ -57,8 +57,8 @@
             var attributes = props.attributes;
             var focus = props.focus;
 
-            /* Update csName*/
 
+            /* Select Image*/
             var onSelectImage = (media) => {
                 props.setAttributes({
                     mediaURL: media.url,
@@ -81,7 +81,7 @@
                     'div', {className: "cscard-container"},
                     el.createElement(mediaUploadButton, {
                         buttonProps: {
-                            className: attributes.mediaID ? 'image-button' : 'button-large'
+                            className: attributes.mediaID ? 'image-button' : 'components-button button button-large'
                         },
                         onSelect: onSelectImage,
                         type: 'image',
@@ -100,24 +100,17 @@
                     el.createElement(blocks.Editable, {
                         tagName: 'h4',
                         placeholder: __('Service . Year'),
-                        className: "grey",
                         onChange: onChangeCsmeta,
-                        value: attributes.csMeta,
-                        focus: focus,
-                        onFocus: props.setFocus
+                        value: attributes.csMeta
                     })
                     );
         },
 
         save: function (props) {
 //            var attributes = props.attributes;
-//            return(
-//            el.createElement('div', {className: "cscard-container"},
-//            el.createElement('img', {src: attributes.mediaURL}
-//                    ),
-//            el.createElement('h3',)
-//                    )
-//            );
+//            
+//            return el.createElement('div', {className: props.className},
+//            el.createElement('img',{src: attributes.mediaURL}));
         }
     });
 }
