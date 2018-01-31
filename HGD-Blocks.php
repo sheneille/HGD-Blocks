@@ -51,4 +51,7 @@ require_once( GB_DIR . '/block/01-icon-text/index.php' );
  */
 require_once( GB_DIR . '/block/02-cscard/index.php' );
 
-
+/**
+ * BLOCK: Button Text
+ */
+require_once( GB_DIR . '/block/03-button-text/index.php' );
