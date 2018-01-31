@@ -11,7 +11,7 @@
     margin: 0;
 }
 
-.blocks-editable{
+.icon-container + .blocks-editable{
     max-width: 80%;
     display: inline-block;
     margin-left: 40px;
