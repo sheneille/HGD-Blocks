@@ -37,11 +37,16 @@
 	save: function ( props ) {
 	    var content = props.attributes.content;
 	    
-	    return element.createElement( 'p', {
-		className: props.className
-		},
-		content
-	    );
+	    return element.createElement( 'div',  
+				{className: props.className },
+				element.createElement( 'input', 
+						    {
+							type: 'button',
+							value: content,
+							className: 'hgd-button'
+						    }
+						)
+				);
 	}
     });
     
