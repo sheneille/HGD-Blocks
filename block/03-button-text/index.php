@@ -39,6 +39,12 @@ function hgd_block_03_block_button_text_editor_assets() {
 
 add_action( 'enqueue_block_assets', 'hgd_block_03_block_button_text_frontend_assets' );
 
+/**
+ * Enqueue the block's assets for the frontend
+ * 
+ * @since 0.0.1
+ */
+
 function hgd_block_03_block_button_text_frontend_assets() {
 	
 	wp_enqueue_style(
