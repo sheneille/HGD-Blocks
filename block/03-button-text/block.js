@@ -30,8 +30,17 @@
 		onFocus: props.SetFocus
 		},
 	    );
+	},
+	
+	save: function ( props ) {
+	    var content = props.attributes.content;
+	    
+	    return element.createElement( 'p', {
+		className: props.className
+		},
+		content
+	    );
 	}
-    }
-	);
+    });
     
 } )();
